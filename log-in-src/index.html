@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In Page</title>
+
+    <!-- CSS -->
+<link rel="stylesheet" href="../log-in-src/styles.css">
+
+<!-- FONT FAMILY -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mynerve&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+<!-- BODY BEGINS -->
+
+<body>
+
+   <div class="full-screen-container">
+    <div class="login-container">
+    <h1 type="title" class="login-title" id="title">COME IN..</h1> 
+    <form action="" class="form">
+    <div class="input-group" id="nameField">
+        <label for="name">
+            <i class="uil uil-user"></i>
+            Username:
+        </label>
+        <input type="name" name="name" >
+        <span class="msg"></span>
+    </div>  
+    <div class="input-group" id="emailField">
+        <label for="email">
+            <i class="uil uil-envelope"></i>
+            Email Address:
+        </label>
+        <input type="email" name="email">
+        <span class="msg">Please enter a valid email address!</span>
+    </div>  
+
+    <div class="input-group" id="password">
+        <label for="password">
+            <i class="uil uil-key-skeleton"></i>
+            Secret Key:
+        </label>
+        <input type="password" name="password" >
+        <span class="msg">Incorrect Password- Please try again!</span>
+    </div> 
+      
+      <div class="login-button-container">
+        <span class="btn row">
+        <button type="button" class="login-button" id="logInBtn">Log in</button>
+        </span>
+        <span class="btn row">
+      <button type="button" class="login-button" id="signUpBtn">Sign Up</button>
+        </span>
+        </div>
+
+    </form>
+   </div> 
+   </div>
+
+
+
+<script>
+
+const signUp = document.getElementById("signUpBtn");
+const logIn = document.getElementById("logInBtn");
+const emailField = document.getElementById("emailField");
+const passwordField = document.getElementById("passwordField");
+const nameField = document.getElementById("nameField");
+const title = document.getElementById("title")
+
+logIn.onclick = function(){
+    document.getElementById("title").innerHTML="COME IN..";
+    emailField.style.maxHeight= "0";
+    preventDefault();
+};
+signUp.onclick = function(){
+    document.getElementById("title").innerHTML="JOIN US..";
+    emailField.style.maxHeight="100%"
+    preventDefault();
+};
+
+
+
+</script>
+</body>
+</html>
